@@ -1,0 +1,6 @@
+{
+  "name": "Chandu Japanese School",
+  "description": "বাংলায় সহজে জাপানি শেখার পূর্ণাঙ্গ প্ল্যাটফর্ম - হিরাগানা, কাতাকানা, JLPT N5 কাঞ্জি চিত্রলিপি, ইন্টারেক্টিভ কুইজ ও প্রগ্রেস ট্র্যাকিং",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

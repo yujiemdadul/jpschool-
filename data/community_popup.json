@@ -1,0 +1,20 @@
+{
+  "id": "community_popup",
+  "isEnabled": true,
+  "titleBn": "আমাদের অফিশিয়াল জাপানিজ লার্নিং কমিউনিটিতে স্বাগতম!",
+  "tagBn": "Chandu Japanese School • অফিশিয়াল কমিউনিটি",
+  "descriptionBn": "জাপানি বর্ণমালা, শব্দভাণ্ডার ও JLPT N5 পরীক্ষার সেরা প্রস্তুতির জন্য আমাদের লার্নিং কমিউনিটিতে যুক্ত হোন। প্রতিদিনের প্রশ্ন-উত্তর, কুইজ আলোচনা ও এক্সক্লুসিভ স্টাডি শিট সবার আগে পেতে আমাদের গ্রুপ ও চ্যানেলে যোগ দিন!",
+  "imageUrl": "/community_banner.jpg",
+  "primaryLinkUrl": "https://www.facebook.com/groups/chandujapanese",
+  "primaryLinkText": "কমিউনিটিতে যোগ দিন 🚀",
+  "primaryPlatform": "facebook",
+  "secondaryPlatform": "telegram",
+  "highlightPoints": [
+    "দৈনিক জাপানি শব্দ ও ব্যাকরণ প্র্যাকটিস",
+    "ফ্রি PDF শিট ও লেকচার নোটস কালেকশন",
+    "JLPT N5 প্রশ্নব্যাংক ও এক্সপার্ট ডিসকাশন"
+  ],
+  "snoozeHours": 6,
+  "updatedAt": 1790935910702,
+  "updatedBy": "emdadulff12@gmail.com"
+}

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Sakura flower definition -->
+    <g id="icon-sakura">
+      <path d="M 0 0 C -6 -12 -12 -18 0 -27 C 12 -18 6 -12 0 0 Z" fill="#e11d48" />
+      <path d="M 0 0 C -6 -12 -12 -18 0 -27 C 12 -18 6 -12 0 0 Z" fill="#e11d48" transform="rotate(72)" />
+      <path d="M 0 0 C -6 -12 -12 -18 0 -27 C 12 -18 6 -12 0 0 Z" fill="#e11d48" transform="rotate(144)" />
+      <path d="M 0 0 C -6 -12 -12 -18 0 -27 C 12 -18 6 -12 0 0 Z" fill="#e11d48" transform="rotate(216)" />
+      <path d="M 0 0 C -6 -12 -12 -18 0 -27 C 12 -18 6 -12 0 0 Z" fill="#e11d48" transform="rotate(288)" />
+      <circle cx="0" cy="0" r="3.5" fill="#ffffff" />
+    </g>
+    <path id="icon-petal" d="M 0 0 C -4 -8 -8 -12 0 -18 C 8 -12 4 -8 0 0 Z" fill="#e11d48" />
+  </defs>
+
+  <!-- Centered Emblem (Scales neatly inside 512x512) -->
+  <g transform="translate(256, 256) scale(0.78)">
+    <!-- 1. Rising Sun (Red circle) -->
+    <circle cx="0" cy="-40" r="145" fill="#e11d48" />
+
+    <!-- 2. Mount Fuji Dark Body -->
+    <path d="M -180 120 C -120 70 -70 -40 -35 -105 L 35 -105 C 70 -40 120 70 180 120 Z" fill="#0c1f38" />
+
+    <!-- 3. Snowcap -->
+    <path d="M -35 -105 L -20 -70 L -10 -85 L 0 -60 L 10 -85 L 20 -70 L 35 -105 Z" fill="#ffffff" />
+    <path d="M -20 -70 L -12 -50 L -4 -68 L 0 -45 L 4 -68 L 12 -50 L 20 -70 L 35 -105 L -35 -105 Z" fill="#ffffff" opacity="0.95" />
+
+    <!-- 4. Water Reflections -->
+    <g fill="#0c1f38">
+      <path d="M -60 142 Q 0 140 60 142 Q 0 145 -60 142 Z" opacity="0.85" />
+      <path d="M -85 152 Q 0 150 85 152 Q 0 156 -85 152 Z" opacity="0.9" />
+      <path d="M -115 163 Q 0 160 115 163 Q 0 168 -115 163 Z" />
+      <path d="M -80 174 Q 0 172 80 174 Q 0 178 -80 174 Z" opacity="0.8" />
+      <path d="M -45 184 Q 0 182 45 184 Q 0 187 -45 184 Z" opacity="0.7" />
+    </g>
+
+    <!-- 5. Torii Gate -->
+    <g>
+      <path d="M -115 18 C -60 12 60 12 115 18 L 118 6 C 60 0 -60 0 -118 6 Z" fill="#ffffff" />
+      <path d="M -112 16 C -60 11 60 11 112 16 L 114 9 C 60 4 -60 4 -114 9 Z" fill="#0c1f38" />
+      <path d="M -105 28 L 105 28 L 100 21 L -100 21 Z" fill="#ffffff" />
+
+      <rect x="-96" y="44" width="192" height="12" rx="2" fill="#ffffff" />
+      <rect x="-92" y="46" width="184" height="8" rx="1" fill="#0c1f38" />
+
+      <rect x="-7" y="27" width="14" height="18" fill="#ffffff" />
+      <rect x="-4" y="29" width="8" height="14" fill="#0c1f38" />
+
+      <path d="M -66 28 L -52 28 L -48 135 L -70 135 Z" fill="#ffffff" />
+      <path d="M -62 32 L -54 32 L -51 132 L -65 132 Z" fill="#0c1f38" />
+      <rect x="-73" y="132" width="28" height="6" rx="2" fill="#ffffff" />
+
+      <path d="M 52 28 L 66 28 L 70 135 L 48 135 Z" fill="#ffffff" />
+      <path d="M 54 32 L 62 32 L 65 132 L 51 132 Z" fill="#0c1f38" />
+      <rect x="45" y="132" width="28" height="6" rx="2" fill="#ffffff" />
+    </g>
+
+    <!-- 6. Outer Dark Navy Crescent -->
+    <path d="M 130 -220 
+             C 40 -255 -80 -235 -170 -160 
+             C -265 -80 -300 65 -250 180 
+             C -200 290 -70 330 65 315 
+             C 140 305 210 260 250 195 
+             C 170 240 70 248 -10 225 
+             C -110 195 -185 110 -185 -5 
+             C -185 -125 -100 -210 50 -225 
+             Z" fill="#0c1f38" />
+
+    <!-- 7. Sakura Branch -->
+    <path d="M 60 -210 Q 140 -230 190 -210 Q 230 -190 280 -140" fill="none" stroke="#0c1f38" stroke-width="9" stroke-linecap="round" />
+    <path d="M 140 -222 Q 170 -260 215 -270" fill="none" stroke="#0c1f38" stroke-width="6" stroke-linecap="round" />
+    <path d="M 190 -210 Q 220 -225 250 -215" fill="none" stroke="#0c1f38" stroke-width="5" stroke-linecap="round" />
+
+    <use href="#icon-sakura" x="140" y="-235" transform="scale(0.85)" />
+    <use href="#icon-sakura" x="215" y="-270" transform="scale(0.95)" />
+    <use href="#icon-sakura" x="260" y="-210" transform="scale(0.8)" />
+    <use href="#icon-sakura" x="285" y="-140" transform="scale(0.65)" />
+
+    <circle cx="105" cy="-228" r="7" fill="#e11d48" />
+    <circle cx="175" cy="-245" r="8" fill="#e11d48" />
+
+    <use href="#icon-petal" x="230" y="-160" transform="rotate(35) scale(0.8)" />
+    <use href="#icon-petal" x="275" y="-95" transform="rotate(75) scale(0.9)" />
+    <use href="#icon-petal" x="245" y="-30" transform="rotate(40) scale(0.75)" />
+    <use href="#icon-petal" x="220" y="35" transform="rotate(110) scale(0.8)" />
+  </g>
+</svg>

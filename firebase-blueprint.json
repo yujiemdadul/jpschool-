@@ -1,0 +1,110 @@
+{
+  "entities": {
+    "users": {
+      "title": "User Profile",
+      "description": "Stores Japanese learning user profiles, streaks, XP, level progress, and achievements",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "displayName": { "type": "string" },
+        "email": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "createdAt": { "type": "number" },
+        "lastLogin": { "type": "number" },
+        "xp": { "type": "number" },
+        "streak": { "type": "number" },
+        "lastStudyDate": { "type": "string" },
+        "hiraganaProgress": { "type": "object" },
+        "katakanaProgress": { "type": "object" },
+        "quizStats": { "type": "object" },
+        "achievements": { "type": "array" }
+      },
+      "required": ["uid", "displayName", "xp", "streak"]
+    },
+    "quizResults": {
+      "title": "Quiz Result Record",
+      "description": "Historical quiz attempts and accuracy breakdown",
+      "type": "object",
+      "properties": {
+        "course": { "type": "string" },
+        "level": { "type": "number" },
+        "totalQuestions": { "type": "number" },
+        "correctAnswers": { "type": "number" },
+        "scorePercentage": { "type": "number" },
+        "xpEarned": { "type": "number" },
+        "timestamp": { "type": "number" }
+      },
+      "required": ["course", "totalQuestions", "correctAnswers", "scorePercentage", "xpEarned", "timestamp"]
+    },
+    "badges": {
+      "title": "Achievement Badge",
+      "description": "User earned milestone badges such as 7-day streak or 100 characters mastered",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "badgeId": { "type": "string" },
+        "titleBn": { "type": "string" },
+        "titleEn": { "type": "string" },
+        "titleJp": { "type": "string" },
+        "descriptionBn": { "type": "string" },
+        "icon": { "type": "string" },
+        "category": { "type": "string" },
+        "milestone": { "type": "string" },
+        "xpReward": { "type": "number" },
+        "unlockedAt": { "type": "number" },
+        "targetValue": { "type": "number" },
+        "currentValue": { "type": "number" }
+      },
+      "required": ["userId", "badgeId", "titleBn", "titleEn", "icon", "milestone", "unlockedAt"]
+    },
+    "pdfs": {
+      "title": "Japanese Learning PDF Document",
+      "description": "Curated Japanese learning books, sheets, JLPT guides, and worksheets uploaded by admin",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "titleBn": { "type": "string" },
+        "titleJp": { "type": "string" },
+        "descriptionBn": { "type": "string" },
+        "category": { "type": "string" },
+        "level": { "type": "string" },
+        "fileUrl": { "type": "string" },
+        "fileName": { "type": "string" },
+        "fileSizeBytes": { "type": "number" },
+        "fileSizeFormatted": { "type": "string" },
+        "pageCount": { "type": "number" },
+        "uploadedBy": { "type": "string" },
+        "uploadedAt": { "type": "number" },
+        "downloadCount": { "type": "number" },
+        "isFeatured": { "type": "boolean" },
+        "driveUrl": { "type": "string" }
+      },
+      "required": ["id", "titleBn", "category", "fileUrl", "uploadedBy", "uploadedAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "entity": "users",
+      "schema": { "$ref": "#/entities/users" },
+      "subcollections": {
+        "quizResults": {
+          "entity": "quizResults",
+          "schema": { "$ref": "#/entities/quizResults" }
+        },
+        "badges": {
+          "entity": "badges",
+          "schema": { "$ref": "#/entities/badges" }
+        }
+      }
+    },
+    "/badges/{badgeId}": {
+      "entity": "badges",
+      "schema": { "$ref": "#/entities/badges" }
+    },
+    "/pdfs/{pdfId}": {
+      "entity": "pdfs",
+      "schema": { "$ref": "#/entities/pdfs" }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // User profile document: public read for leaderboard and student rankings
+    match /users/{userId} {
+      allow read: if true;
+      allow write: if request.auth != null && request.auth.uid == userId;
+
+      // User quiz results subcollection
+      match /quizResults/{quizId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+
+      // User badges subcollection
+      match /badges/{badgeId} {
+        allow read: if true;
+        allow write: if request.auth != null && request.auth.uid == userId;
+      }
+    }
+
+    // Top-level Badges collection for milestone achievements
+    match /badges/{badgeId} {
+      allow read: if true;
+      allow write: if request.auth != null && (
+        request.resource.data.userId == request.auth.uid || 
+        (resource != null && resource.data.userId == request.auth.uid)
+      );
+    }
+
+    // Japanese Learning PDF library documents: public read, write by admin emdadulff12@gmail.com
+    match /pdfs/{pdfId} {
+      allow read: if true;
+      allow write: if request.auth != null && request.auth.token.email.lower() == 'emdadulff12@gmail.com';
+    }
+  }
+}

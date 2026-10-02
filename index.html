@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Chandu Japanese School - বাংলায় সহজে জাপানি শেখা</title>
+    <meta name="description" content="বাংলায় সহজে জাপানি শেখার পূর্ণাঙ্গ প্ল্যাটফর্ম - হিরাগানা, কাতাকানা, JLPT N5 কাঞ্জি চিত্রলিপি, ইন্টারেক্টিভ কুইজ ও প্রগ্রেস ট্র্যাকিং।" />
+    <meta property="og:title" content="Chandu Japanese School - বাংলায় সহজে জাপানি শেখা" />
+    <meta property="og:description" content="বাংলায় সহজে জাপানি শেখার পূর্ণাঙ্গ প্ল্যাটফর্ম - হিরাগানা, কাতাকানা, JLPT N5 কাঞ্জি চিত্রলিপি, ইন্টারেক্টিভ কুইজ ও প্রগ্রেস ট্র্যাকিং।" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#e11d48" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Chandu Japanese School" />
+    <meta property="og:image" content="/pwa-512x512.png" />
+    <meta name="twitter:image" content="/pwa-512x512.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/pwa-192x192.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      (function() {
+        // Suppress harmless Vite HMR WebSocket connection logs in preview iframe per environment constraints
+        try {
+          var isViteMsg = function(item) {
+            if (!item) return false;
+            var str = typeof item === 'string' ? item : (item.message || item.stack || (typeof item.toString === 'function' ? item.toString() : ''));
+            return str.indexOf('[vite]') !== -1 || str.indexOf('WebSocket') !== -1 || str.indexOf('failed to connect to websocket') !== -1;
+          };
+
+          var _origError = console.error;
+          console.error = function() {
+            for (var i = 0; i < arguments.length; i++) {
+              if (isViteMsg(arguments[i])) {
+                console.debug.apply(console, arguments);
+                return;
+              }
+            }
+            _origError.apply(console, arguments);
+          };
+
+          var _origWarn = console.warn;
+          console.warn = function() {
+            for (var i = 0; i < arguments.length; i++) {
+              if (isViteMsg(arguments[i])) {
+                console.debug.apply(console, arguments);
+                return;
+              }
+            }
+            _origWarn.apply(console, arguments);
+          };
+
+          window.addEventListener('error', function(e) {
+            if (isViteMsg(e.message) || isViteMsg(e.error)) {
+              e.preventDefault();
+              e.stopPropagation();
+            }
+          }, true);
+
+          window.addEventListener('unhandledrejection', function(e) {
+            if (isViteMsg(e.reason)) {
+              e.preventDefault();
+              e.stopPropagation();
+            }
+          }, true);
+        } catch (e) {}
+
+        try {
+          var saved = localStorage.getItem('chandu_theme_preference');
+          var isDark = saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if (isDark) {
+            document.documentElement.classList.add('dark');
+            document.documentElement.style.colorScheme = 'dark';
+          } else {
+            document.documentElement.classList.remove('dark');
+            document.documentElement.style.colorScheme = 'light';
+          }
+
+          var savedFontSize = localStorage.getItem('chandu_font_size_preference') || 'normal';
+          if (savedFontSize === 'large') {
+            document.documentElement.style.fontSize = '18px';
+          } else if (savedFontSize === 'small') {
+            document.documentElement.style.fontSize = '15px';
+          } else {
+            document.documentElement.style.fontSize = '16px';
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-stone-50 text-stone-900 antialiased font-sans selection:bg-rose-500 selection:text-white dark:bg-stone-950 dark:text-stone-100" style="font-family: 'Hind Siliguri', 'Plus Jakarta Sans', 'Noto Sans JP', system-ui, -apple-system, sans-serif;">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
